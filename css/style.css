@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Roboto');
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-container{
+    height: 100%;
+    margin-left: 210px;
+    background-color: #ffffff
+}
+
+/************** Notebooks sidebar **************/
+
+.sidebar{
+    width: 210px;
+    height: 100%;
+    background-color: #30363d;
+    float: left
+}
+
+.min-sidebar{
+    color: #dddee1;
+    float: right;
+    font-size: 12px;
+    padding: 15px 20px;
+}
+
+.sidebar-menu{
+    width: 100%;
+    float: left;
+    margin-top: 20px
+}
+
+.sidebar-menu-list{
+    width: 100%;
+}
+
+.sidebar-menu-list li{
+    list-style: block;
+    list-style-type: none;
+
+}
+
+.sidebar-menu-list li a{
+    display: block;
+    text-decoration: none;
+    padding: 14px;
+    font-weight: 400;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(255,255,255,0.1);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-menu-list li a i{
+    padding-right: 10px;
+    color: #ffffff
+}
+
+.sidebar-menu-list .add-notebook{
+    float: right
+}
+
+.sidebar-menu-list>li>a{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #fff
+}
+
+.sidebar-menu-list li.selected{
+    background-color: #353a3e;
+}
+
+.sidebar-menu>.sidebar-menu-list>li.selected>a{
+    color: #ffffff;
+    background-color: #2298d8;
+}
+
+.sidebar-menu>.sidebar-menu-list>li.selected>.sidebar-menu-list>li.selected>a{
+    color: #33393f;
+    background-color: #f8f8f8
+}
+
+.sidebar-menu-list>li>ul>li>a{
+    font-family: 'Open Sans';
+    padding-left: 45px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #949da7;
+    transition: all 0.1s ease-in-out;
+}
+
+.sidebar-menu-list>li>ul>li>a:hover{
+    padding-left: 50px;
+}
+
+.sidebar-menu-list li a:hover{
+    color: #2298d8;
+    transition: all 0.2s ease-in-out;
+}
+
+/************** Notes sidebar **************/
+
+.notes-sidebar{
+    width: 300px;
+    height: 100%;
+    float: left;
+    background-color: #f8f8f8;
+    display:flex;
+    flex-direction:column;
+}
+
+.notes-sidebar-title{
+    width: 100%;
+    overflow: hidden;
+}
+
+.notes-sidebar-title h3{
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    float: left;
+    padding: 20px;
+}
+
+.notes-sidebar-title .delete-notebook{
+    padding-left: 10px;
+    font-size: 13px;
+    color: #000000;
+}
+
+.add-note{
+    float: right;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #33393f
+}
+
+.search-container, .notebook-title-textbox{
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.search-container input, .notebook-title-textbox input{
+    font-family: 'Open Sans', sans-serif;
+    border: 0px none;
+    border-bottom: 1px solid #dadada;
+    height: 40px;
+    line-height: 40px;
+    width: 85%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    padding: 0 10px;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.search-container input:focus, .notebook-title-textbox input:focus{
+    border-bottom-color: #33393f;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.notes-list-container{
+    width: 100%;
+    overflow-y: scroll;
+    flex: 1;
+    margin-top: 40px
+}
+
+.notes-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.notes-list-container::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 20px;
+}
+
+.notes-list-container::-webkit-scrollbar-track {
+    background: #ebebeb;
+    border-radius: 10px
+}
+
+.note-item{
+    border-bottom: 1px solid #dadada;
+    padding: 20px 20px 25px 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.note-item.selected{
+    background-color: #dadada
+}
+
+.note-item:hover{
+    background-color: #0098d6 !important;
+    color: #ffffff;
+    transition: all 0.25s ease-in-out;
+}
+
+.note-item:hover .note-item-action a{
+    color: #ffffff
+}
+
+.note-item-title{
+    overflow: hidden;
+    margin-bottom: 7px
+}
+
+.note-item-title h4{
+    float: left;
+    margin: 5px 0;
+    font-family: 'Open Sans';
+    font-size: 17px
+}
+
+.note-item-action{
+    float: right;
+    margin: 5px 0
+}
+
+.note-item-action a{
+    padding: 0 5px;
+    text-decoration: none;
+    color: #33393f;
+    font-size: 17px;
+}
+
+.note-item-action a.add-fav:hover{
+    color: #ef503b
+}
+
+.note-item-date{
+    float: left;
+    font-family: 'Open Sans';
+    font-size: 10px
+}
+
+/************** Text editor **************/
+
+.editor-container{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.editor-wrapper{
+    width: 90%;
+    height: 85%;
+    margin: 20px auto;
+}
+
+.ql-editor::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ql-editor::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 20px;
+}
+
+.ql-editor::-webkit-scrollbar-track {
+    background: #ebebeb;
+    border-radius: 20px
+}
+
+
+.ql-toolbar.ql-snow{
+    text-align: center !important;
+    margin-bottom: 10px !important;
+    border: 0px none !important;
+    border-bottom: 0px none !important;
+    position: relative;
+}
+
+.ql-toolbar.ql-snow:after{
+    position: absolute;
+    border: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    margin-top: 15px;
+    background: #ffffff;
+    background: -moz-linear-gradient(left,  #ffffff 5%, #bcc2c6 50%, #ffffff 95%);
+    background: -webkit-linear-gradient(left,  #ffffff 5%,#bcc2c6 50%,#ffffff 95%);
+    background: linear-gradient(to right,  #ffffff 5%,#bcc2c6 50%,#ffffff 95%);
+}
+
+.ql-toolbar.ql-snow .ql-formats{
+    margin: 5px 0px !important;
+    padding: 0 10px !important;
+}
+
+
+.ql-container.ql-snow{
+    border: 0px solid black !important
+}
+
+.ql-editor{
+    font-size: 16px !important;
+    padding: 30px 20px !important;
+}
+
+.ql-editor strong, .ql-editor b{
+    font-weight: bold
+}
+
+.ql-editor em{
+    font-style: italic
+}
+
+/************** Tooltip **************/
+
+.tooltip{
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    z-index: 1000;
+    transform: translateX(-50%);
+}
+
+.tooltip-arrow{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent
+}
+
+.tooltip-text{
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    padding: 6px 12px 7px 12px;
+    background-color: #555;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    color: #ffffff;
+    z-index: 100
+}
+
+/************** Popup windows **************/
+
+.popup-container, .popup-container-settings{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-window{
+    width: 500px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #f8f8f8;
+    border-radius: 9px;
+}
+
+.popup-window h4{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 30px
+}
+
+.notebook-title-textbox{
+    margin-top: 30px
+}
+
+.notebook-title-textbox input{
+    text-align: center;
+    width: 60%
+}
+
+.popup-window-buttons{
+    text-align: center;
+    margin-top: 40px
+}
+
+.popup-window-buttons .button{
+    margin: 0 10px;
+}
+
+.button{
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Lato';
+    color: #ffffff;
+    padding: 11px 25px;
+    border-radius: 8px;
+    background-color: #3ea8e1;
+    display: inline-block;
+}
+
+.button:hover{
+    background-color: #2298d8
+}
+
+/************** Settings and About window **************/
+
+.settings-window{
+    width: 600px;
+    height: 330px;
+    font-family: 'Lato';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #f8f8f8;
+    border-radius: 9px;
+}
+
+.settings-window>header{
+    width: 100%;
+    border-bottom: 1px solid #2298d8;
+}
+
+.settings-window>header>span{
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.settings-window>header>span.selected{
+    background-color: #2298d8;
+    color: #ffffff
+}
+
+.settings-page{
+    margin-top: 30px;
+}
+
+.setting-item{
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: 'Raleway';
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+.setting-item h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.setting-item input:nth-of-type(2){
+    margin-left: 70px
+}
+
+.setting-item:nth-of-type(2){
+    margin-bottom: 20px
+}
+
+.setting-item select{
+    padding: 5px 10px;
+    min-width: 200px;
+    border-radius: 5px
+}
+
+.settings-window .popup-window-buttons{
+    margin: 20px 0 30px;
+}
+
+.about-page .about-content{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.about-content>h4{
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 20px
+}
+
+.about-content>div{
+    margin-bottom: 10px
+}
+
+.about-content>div>a{
+    text-decoration: none
+}
+
+.about-content .app-ver{
+    font-size: 13px;
+    margin-bottom: 20px
+}

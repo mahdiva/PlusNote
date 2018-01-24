@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>+Note</title>
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/quill.snow.css" rel="stylesheet">
+
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <a class="min-sidebar" href="#" data-toggle="close"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+
+            <div class="sidebar-menu">
+                <ul class="sidebar-menu-list">
+
+                    <li class="notebooks selected"><a href="#"><i class="fa fa-book" aria-hidden="true"></i><span>Notebooks</span><span class="add-notebook"><i class="fa fa-plus" aria-hidden="true"></i></span></a>
+                        <ul class="sidebar-menu-list sidebar-sub-menu">
+                        </ul>
+                    </li>
+
+                    <li class="favourites"><a href="#"><i class="far fa-heart" aria-hidden="true"></i><span>Favourites</span></a></li>
+
+                    <li class="settings"><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i><span>Settings</span></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="main-container">
+
+            <div class="notes-sidebar">
+                <div class="notes-sidebar-title">
+                    <h3></h3>
+                    <a href="#" class="add-note"><i class="fa fa-plus"></i></a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" name="search" placeholder="Search..."/>
+                </div>
+
+                <div class="notes-list-container"></div>
+            </div>
+
+            <div class="editor-container">
+                <div class="editor-wrapper">
+
+                    <div class="editor"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="popup-container" style="display: none">
+            <div class="popup-window">
+                <h4>Create Notebook</h4>
+                <div class="notebook-title-textbox">
+                    <input type="text" name="search" placeholder="Title"/>
+                </div>
+                <div class="popup-window-buttons">
+                    <div class="button btn-cancel" style="background-color:#b4b4b4">Cancel</div>
+                    <div class="button btn-create">Create</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-container-settings" style="display: none">
+            <div class="settings-window">
+                <header>
+                    <span class="tab-settings selected">Settings</span>
+                    <span class="tab-about">About</span>
+                </header>
+                <div class="settings-page">
+                    <div class="setting-item">
+                        <h3>Theme:</h3>
+                        <input type="radio" name="theme" value="light" checked> Light
+                        <input type="radio" name="theme" value="dark"> Dark
+                    </div>
+                    <div class="setting-item">
+                        <h3>Code Block Theme:</h3>
+                        <select>
+                            <option value="monokai" selected>Monokai</option>
+                            <option value="vs2015">Visual Studio 2015</option>
+                            <option value="solarized-light">Solarized Light</option>
+                            <option value="solarized-dark">Solarized Dark</option>
+                            <option value="dracula">Dracula</option>
+                        </select>
+                    </div>
+
+                    <div class="popup-window-buttons">
+                        <div class="button btn-cancel" style="background-color:#b4b4b4">Cancel</div>
+                        <div class="button btn-save">&nbsp;&nbsp;Save&nbsp;&nbsp;</div>
+                    </div>
+
+                </div>
+                <div class="about-page" style="display: none">
+                    <div class="about-content">
+                        <h4>+Note</h4>
+                        <div class="app-ver">Version 1.0</div>
+                        <div class="app-ver">- Mahdi Varposhti -</div>
+                        <div><a href="https://mahdivarposhti.github.io/PlusNote/" target="_blank">Website</a></div>
+                        <div><a href="https://github.com/MahdiVarposhti/PlusNote" target="_blank">Github</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

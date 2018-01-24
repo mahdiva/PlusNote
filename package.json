@@ -1,0 +1,23 @@
+{
+  "name": "plusnote",
+  "version": "1.0.0",
+  "description": "A note taking application for programmers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . PlusNote --platform=win32 --arch=x64 --no-prune"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.7.10",
+    "electron-packager": "^10.1.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-winstaller": "^2.6.4",
+    "highlight.js": "^9.12.0",
+    "html-pdf": "^2.2.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.20.1",
+    "quill": "^1.3.4"
+  }
+}
