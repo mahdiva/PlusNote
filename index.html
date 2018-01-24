@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>+Note | Better Programming Notes</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/1.1.0/granim.js"></script>
     <style>
 
     *{
@@ -15,8 +16,6 @@
     html{
         width: 100%;
         height: 100%;
-        background-color: #159957;
-        background-image: linear-gradient(120deg, #155799, #159957);
     }
 
     body{
@@ -25,6 +24,18 @@
         color: #ffffff;
         box-sizing: border-box;
         font-family: 'Open Sans';
+    }
+
+    #canvas-basic {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -100
     }
 
     .page-title{
@@ -61,6 +72,30 @@
     }
 
     </style>
+    <script>
+
+    window.onload = function(){
+        var granimInstance = new Granim({
+            element: '#canvas-basic',
+            name: 'basic-gradient',
+            direction: 'left-right',
+            opacity: [1, 1],
+            isPausedWhenNotInView: true,
+            states : {
+                "default-state": {
+                    gradients: [
+                        ['#155799', '#159957'],
+                        ['#AA076B', '#61045F'],
+                        ['#02AAB0', '#00CDAC'],
+                        ['#DA22FF', '#9733EE'],
+                        ['#2298d8', '#00c876']
+                    ]
+                }
+            }
+        });
+    }
+
+    </script>
 </head>
 <body>
     <h1 class="page-title">+Note</h1>
@@ -68,5 +103,6 @@
 
     <a href="https://www.dropbox.com/s/h6q8e86lollmz1k/%2BNote-win.zip?dl=1" class="download-btn">Windows 64BIT</a>
     <a href="https://www.dropbox.com/s/idd8gkl7aa57gt2/%2BNote-OSX.zip?dl=1" class="download-btn">Mac OS</a>
+    <canvas id="canvas-basic"></canvas>
 </body>
 </html>
