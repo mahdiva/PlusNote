@@ -16,7 +16,7 @@ A note-taking application for code lovers, written using JavaScript, electron an
 
 <br>
 
-[Download](https://mahdivarposhti.github.io/PlusNote/)
+[Download +Note](https://mahdivarposhti.github.io/PlusNote/)
 
 <br>
 
