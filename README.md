@@ -22,3 +22,8 @@ A note-taking application for code lovers, written using JavaScript, electron an
 
 
 ![screenshot](https://user-images.githubusercontent.com/35560951/35360609-8add21b6-011b-11e8-9231-6dc02781fae5.jpg)
+
+<br>  
+
+## **License**
+ This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/MahdiVarposhti/PlusNote/master/LICENSE) file for details.
